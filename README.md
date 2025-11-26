@@ -63,10 +63,10 @@ Frontend runs on `http://localhost:3000`
 ```
 ┌─────────────────────────────────────┐
 │     React Frontend (port 3000)      │
-│     └─ EventDashboard              │
-│        ├─ EventForm (CRUD)         │
-│        ├─ EventTable (Active)      │
-│        └─ EventTable (Archived)    │
+│     └─ EventDashboard               │
+│        ├─ EventForm (CRUD)          │
+│        ├─ EventTable (Active)       │
+│        └─ EventTable (Archived)     │
 ├─────────────────────────────────────┤
 │     Axios HTTP Client               │
 ├─────────────────────────────────────┤
