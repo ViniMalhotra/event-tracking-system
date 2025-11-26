@@ -2,6 +2,18 @@
 
 A full-stack event management application built with Spring Boot and React. This project demonstrates event tracking management with CRUD operations.
 
+## Landing Page
+<img width="1736" height="900" alt="Screenshot 2025-11-25 at 5 25 30 PM" src="https://github.com/user-attachments/assets/f010e3f6-25e2-469a-9711-f1634446b2c1" />
+
+## Create new Event
+<img width="1736" height="930" alt="Screenshot 2025-11-25 at 5 25 58 PM" src="https://github.com/user-attachments/assets/8558c882-be15-4321-8506-ae4eda7e5314" />
+
+## Edit Event
+<img width="1504" height="952" alt="Screenshot 2025-11-25 at 8 53 23 PM" src="https://github.com/user-attachments/assets/cf261159-ad63-4f37-a481-6c433b30e7f4" />
+
+## Delete Event
+<img width="1736" height="930" alt="Screenshot 2025-11-25 at 5 27 27 PM" src="https://github.com/user-attachments/assets/e37cf14e-803a-44d8-8d90-efa950df28b6" />
+
 ## Quick Start
 
 ### Backend Setup
