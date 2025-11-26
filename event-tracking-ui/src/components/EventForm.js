@@ -50,6 +50,13 @@ const EventForm = ({ onSubmit, initialData = null, onCancel }) => {
             }
         }
 
+        // Check start date is not in the past
+        const now = new Date();
+        const startDate = new Date(formData.startDate);
+        if (startDate < now) {
+            newErrors.startDate = 'Start date cannot be in the past';
+        }
+
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
