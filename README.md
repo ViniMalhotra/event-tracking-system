@@ -120,7 +120,7 @@ The backend allows requests from `http://localhost:3000`. Modify `CorsConfig.jav
 ## Development Workflow
 
 1. Start Backend: `cd event-tracking-service && ./gradlew bootRun`
-2. Start Frontend**: `cd event-tracking-ui && npm start`
-3. Access Application**: Open `http://localhost:3000` in browser
+2. Start Frontend: `cd event-tracking-ui && npm start`
+3. Access Application: Open `http://localhost:3000` in browser
 4. Create/Manage Events: Use the UI to perform CRUD operations
 5. View Logs: Check console output for errors/debugging
