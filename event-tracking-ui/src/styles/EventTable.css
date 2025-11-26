@@ -1,5 +1,8 @@
 .event-table-container {
+    height: 600px;
     overflow-x: auto;
+    display: flex;
+    flex-direction: column;
     border-radius: 8px;
     border: 1px solid #e0e0e0;
 }
