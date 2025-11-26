@@ -2,6 +2,11 @@
 
 A full-stack event management application built with Spring Boot and React. This project demonstrates event tracking management with CRUD operations.
 
+## Demo
+
+https://github.com/user-attachments/assets/0bd8f887-04a9-4b5e-b5a8-cd9cf5387d84
+
+
 ## Landing Page
 <img width="1736" height="900" alt="Screenshot 2025-11-25 at 5 25 30 PM" src="https://github.com/user-attachments/assets/f010e3f6-25e2-469a-9711-f1634446b2c1" />
 
@@ -58,10 +63,10 @@ Frontend runs on `http://localhost:3000`
 ```
 ┌─────────────────────────────────────┐
 │     React Frontend (port 3000)      │
-│     └─ EventDashboard              │
-│        ├─ EventForm (CRUD)         │
-│        ├─ EventTable (Active)      │
-│        └─ EventTable (Archived)    │
+│     └─ EventDashboard               │
+│        ├─ EventForm (CRUD)          │
+│        ├─ EventTable (Active)       │
+│        └─ EventTable (Archived)     │
 ├─────────────────────────────────────┤
 │     Axios HTTP Client               │
 ├─────────────────────────────────────┤
@@ -106,7 +111,7 @@ Frontend runs on `http://localhost:3000`
 ```bash
 cd event-tracking-service
 ./gradlew test
-``
+```
 
 ## CORS Configuration
 
@@ -115,7 +120,7 @@ The backend allows requests from `http://localhost:3000`. Modify `CorsConfig.jav
 ## Development Workflow
 
 1. Start Backend: `cd event-tracking-service && ./gradlew bootRun`
-2. Start Frontend**: `cd event-tracking-ui && npm start`
-3. Access Application**: Open `http://localhost:3000` in browser
+2. Start Frontend: `cd event-tracking-ui && npm start`
+3. Access Application: Open `http://localhost:3000` in browser
 4. Create/Manage Events: Use the UI to perform CRUD operations
 5. View Logs: Check console output for errors/debugging
