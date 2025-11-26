@@ -106,7 +106,7 @@ Frontend runs on `http://localhost:3000`
 ```bash
 cd event-tracking-service
 ./gradlew test
-``
+```
 
 ## CORS Configuration
 
