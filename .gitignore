@@ -1,0 +1,37 @@
+# Backend (Spring Boot)
+event-tracking-service/build/
+event-tracking-service/.gradle/
+event-tracking-service/.idea/
+event-tracking-service/*.iml
+event-tracking-service/out/
+event-tracking-service/.DS_Store
+event-tracking-service/*.class
+event-tracking-service/*.jar
+event-tracking-service/.env
+
+# Frontend (React)
+event-tracking-ui/node_modules/
+event-tracking-ui/build/
+event-tracking-ui/dist/
+event-tracking-ui/.env
+event-tracking-ui/.env.local
+event-tracking-ui/.env.development.local
+event-tracking-ui/.env.test.local
+event-tracking-ui/.env.production.local
+event-tracking-ui/npm-debug.log*
+event-tracking-ui/yarn-debug.log*
+event-tracking-ui/yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
