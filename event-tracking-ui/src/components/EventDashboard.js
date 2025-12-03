@@ -129,6 +129,7 @@ const EventDashboard = () => {
                             initialData={editingEvent}
                             onSubmit={handleCreateOrUpdate}
                             onCancel={handleCancel}
+                            existingEvents={events}
                         />
                     </div>
                 ) : (

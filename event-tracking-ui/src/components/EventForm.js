@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/EventForm.css';
 
-const EventForm = ({ onSubmit, initialData = null, onCancel }) => {
+const EventForm = ({ onSubmit, initialData = null, onCancel, existingEvents = [] }) => {
     const [formData, setFormData] = useState(initialData || {
         name: '',
         description: '',
@@ -32,6 +32,16 @@ const EventForm = ({ onSubmit, initialData = null, onCancel }) => {
         if (!formData.startDate) newErrors.startDate = 'Start date is required';
         if (!formData.endDate) newErrors.endDate = 'End date is required';
         if (!formData.location.trim()) newErrors.location = 'Location is required';
+
+        // Check for duplicate event name (only when creating new event)
+        if (!initialData && formData.name.trim()) {
+            const isDuplicate = existingEvents.some(
+                event => event.name.toLowerCase() === formData.name.trim().toLowerCase()
+            );
+            if (isDuplicate) {
+                newErrors.name = 'An event with this name already exists';
+            }
+        }
 
         if (formData.startDate && formData.endDate) {
             const start = new Date(formData.startDate);
@@ -79,6 +89,7 @@ const EventForm = ({ onSubmit, initialData = null, onCancel }) => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Enter event name"
+                    disabled={initialData ? true : false}
                 />
                 {errors.name && <span className="error">{errors.name}</span>}
             </div>
