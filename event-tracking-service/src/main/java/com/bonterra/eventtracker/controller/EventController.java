@@ -32,7 +32,13 @@ public class EventController {
     }
 
     @PostMapping
-    public ResponseEntity<Event> createEvent(@RequestBody Event event) {
+    public ResponseEntity<?> createEvent(@RequestBody Event event) {
+        // Check if event with same name already exists
+        if (eventRepository.findByNameIgnoreCase(event.getName()).isPresent()) {
+            return ResponseEntity.status(HttpStatus.CONFLICT)
+                    .body(new ErrorResponse("An event with this name already exists"));
+        }
+
         // Validate that start date is before end date
         if (event.getStartDate() != null && event.getEndDate() != null &&
                 event.getStartDate().isAfter(event.getEndDate())) {
@@ -43,10 +49,20 @@ public class EventController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Event> updateEvent(@PathVariable UUID id, @RequestBody Event eventDetails) {
+    public ResponseEntity<?> updateEvent(@PathVariable UUID id, @RequestBody Event eventDetails) {
         Optional<Event> eventOptional = eventRepository.findById(id);
         if (eventOptional.isPresent()) {
             Event event = eventOptional.get();
+
+            // Check if trying to update to a name that already exists (and it's a different
+            // event)
+            if (!event.getName().equalsIgnoreCase(eventDetails.getName())) {
+                if (eventRepository.findByNameIgnoreCase(eventDetails.getName()).isPresent()) {
+                    return ResponseEntity.status(HttpStatus.CONFLICT)
+                            .body(new ErrorResponse("An event with this name already exists"));
+                }
+            }
+
             event.setName(eventDetails.getName());
             event.setDescription(eventDetails.getDescription());
             event.setStartDate(eventDetails.getStartDate());
